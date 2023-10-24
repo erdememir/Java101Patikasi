@@ -20,6 +20,6 @@ public class PatikaProje {
         System.out.println("Not ortalamanız: " + sonuc);
         boolean gectiKaldi = sonuc >= 60;
         String str = gectiKaldi ? "Sınıfı Geçti." : "Sınıfta Kaldı.";
-        System.out.println(str);
+        System.out.println(str); 
     }
 }
