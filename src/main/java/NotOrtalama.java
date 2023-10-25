@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class PatikaProje {
+public class NotOrtalama {
     public static void main(String[] args) {
         int mat, fizik, kimya, trkce, tarih, muzik;
         Scanner inp = new Scanner(System.in);
