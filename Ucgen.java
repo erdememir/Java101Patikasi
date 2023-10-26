@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class UcgenAlani {
     public static void main (String[] args) {
+//karekök alma işlemi için googledan kodunu buldum. Başka şekilde çözemedim.
         double a, b, c, u, cevre, alan2;
         Scanner input = new Scanner(System.in);
         System.out.print("Lütfen birinci kenar uzunluğunu giriniz: ");
