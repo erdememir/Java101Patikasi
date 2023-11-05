@@ -1,94 +1,52 @@
 
 import java.util.Scanner;
 
-public class NotOrtalamaV2 {
+public class NotOrtalamaV3 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double mat;
-        double fzk;
-        double tr;
-        double kmy;
-        double mzk;
-        System.out.println("Sınıfta geçti/kaldı uygulamasına hoşgeldiniz. Lütfen ders notlarını 0-100 arasında giriniz.");
-        System.out.print("Matematik notunu giriniz: ");
-        mat = input.nextDouble();
-        if (mat > 100) {
-            System.out.println("Hatalı giriş yaptınız. Lütfen 0-100 arasında olmayan değerler ortalamaya dahil edilmez.");
-        }
-        System.out.print("Fizik notunu giriniz: ");
-        fzk = input.nextDouble();
-        if (fzk > 100) {
-            System.out.println("Hatalı giriş yaptınız. Lütfen 0-100 arasında olmayan değerler ortalamaya dahil edilmez.");
-        }
-        System.out.print("Türkçe notunu giriniz: ");
-        tr = input.nextDouble();
-        if (tr > 100) {
-            System.out.println("Hatalı giriş yaptınız. Lütfen 0-100 arasında olmayan değerler ortalamaya dahil edilmez.");
-        }
-        System.out.print("Kimya notunu giriniz: ");
-        kmy = input.nextDouble();
-        if (kmy > 100) {
-            System.out.println("Hatalı giriş yaptınız. Lütfen 0-100 arasında olmayan değerler ortalamaya dahil edilmez.");
-        }
-        System.out.print("Müzik notunu giriniz: ");
-        mzk = input.nextDouble();
-        if (mzk > 100) {
-            System.out.println("Hatalı giriş yaptınız. Lütfen 0-100 arasında olmayan değerler ortalamaya dahil edilmez.");
-        }
+
+        int mat, fizik, kimya, turkce, muzik;
         double ortalama;
-        if (mat > 100) {
-            ortalama = (fzk + tr + kmy + mzk)/4;
-            System.out.println("Not ortalaması: " + ortalama);
-            if (ortalama > 54){
-                System.out.println("Sınıfı geçti.");
+
+        System.out.println("Not ortalaması hesaplama programına hoş geldiniz. Lütfen değerleri 0-100 arası giriniz.");
+        System.out.print("Matematik notunu giriniz: ");
+        mat = input.nextInt();
+        System.out.print("Fizik notunu giriniz: ");
+        fizik = input.nextInt();
+        System.out.print("Kimya notunu giriniz: ");
+        kimya = input.nextInt();
+        System.out.print("Türkçe notunu giriniz: ");
+        turkce = input.nextInt();
+        System.out.print("Müzik notunu giriniz: ");
+        muzik = input.nextInt();
+
+        if (mat >= 0 && mat <= 100) {
+            if (fizik >= 0 && fizik <= 100) {
+                if (kimya >= 0 && kimya <= 100) {
+                    if (turkce >= 0 && turkce <= 100) {
+                        if (muzik >= 0 && turkce <= 100) {
+                            ortalama = (mat + fizik + kimya + turkce + muzik) / 6;
+                            System.out.println("Ortalama: " + ortalama);
+                            if (ortalama >= 55) {
+                                System.out.println("Sınıfı geçti.");
+                            } else {
+                                System.out.println("Sınıfta kaldı.");
+                            }
+                        } else {
+                            System.out.println("Değerler 0-100 arasında olmalıdır!");
+                        }
+                    } else {
+                        System.out.println("Değerler 0-100 arasında olmalıdır!");
+                    }
+                } else {
+                    System.out.println("Değerler 0-100 arasında olmalıdır!");
+                }
             } else {
-                System.out.println("Sınıfta kaldı.");
+                System.out.println("Değerler 0-100 arasında olmalıdır!");
             }
-        } else if ( fzk > 100) {
-            ortalama = (mat + tr + kmy + mzk)/4;
-            System.out.println("Not ortalaması: " + ortalama);
-        if (ortalama > 54){
-                System.out.println("Sınıfı geçti.");
-            } else {
-                System.out.println("Sınıfta kaldı.");
-            }
-        } 
-        else if (tr > 100) {
-            ortalama = (mat + fzk + kmy + mzk)/4;
-            System.out.println("Not ortalaması: " + ortalama);
-        if (ortalama > 54){
-                System.out.println("Sınıfı geçti.");
-            } else {
-                System.out.println("Sınıfta kaldı.");
-            }
-        }
-        else if (kmy > 100) {
-            ortalama = (mat + fzk + tr + mzk)/4;
-            System.out.println("Not ortaması: " + ortalama);
-        if (ortalama > 54){
-                System.out.println("Sınıfı geçti.");
-            } else {
-                System.out.println("Sınıfta kaldı.");
-            }
-        }
-        else if (mzk > 100) {
-            ortalama = (mat + fzk + tr + kmy)/4;
-            System.out.println("Not ortalaması: " + ortalama);
-        if (ortalama > 54){
-                System.out.println("Sınıfı geçti.");
-            } else {
-                System.out.println("Sınıfta kaldı.");
-            }
-        }
-        else {
-            ortalama = (mat + fzk + tr + kmy + mzk)/5;
-            System.out.println("Not ortalaması: " + ortalama);
-        if (ortalama > 54){
-                System.out.println("Sınıfı geçti.");
-            } else {
-                System.out.println("Sınıfta kaldı.");
-            }
+        } else {
+            System.out.println("Değerler 0-100 arasında olmalıdır!");
         }
     }
 }
