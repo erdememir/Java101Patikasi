@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Daire {
+public class DaireAlani {
     public static void main (String[] args) {
         double r;
         double pi = 3.14;

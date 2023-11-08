@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Daire2 {
+public class DaireDilimAlani {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         

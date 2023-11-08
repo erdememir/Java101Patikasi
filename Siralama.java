@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class SiralamaV2 {
+public class Siralama {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

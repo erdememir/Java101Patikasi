@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class KdvHesaplama {
+    public static void main(String[] args) {
+        double fiyat;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen KDV'sinin hesaplanmasını istediğiniz ücreti belirtiniz: ");
+        fiyat = input.nextDouble();
+        double kdvA = 1.08;
+        double kdvB = 1.18;
+        double kdvli = fiyat >= 1000 ? fiyat * kdvA : fiyat * kdvB;
+        double kdvFarki = kdvli - fiyat;
+        System.out.println("KDV hariç fiyat: " + fiyat);
+        System.out.println(fiyat >= 1000 ? "KDV Oranı: %8" : "KDV Oranı: %18");
+        System.out.println("KDV dahil ücret: " + kdvli + " TL");
+        System.out.println("KDV farkı: " + kdvFarki + " TL");
+    }
+}

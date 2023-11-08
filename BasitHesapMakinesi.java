@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Exercise {
+public class BasitHesapMakinesi {
     public static void main(String[] args){
         int n1, n2, select;
         Scanner input = new Scanner(System.in);
