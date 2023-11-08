@@ -1,3 +1,5 @@
+package Homework;
+
 import java.util.Scanner;
 public class DaireAlani {
     public static void main (String[] args) {
