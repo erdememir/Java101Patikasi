@@ -1,6 +1,6 @@
-import java.util.Scanner;
-
 package Homework;
+
+import java.util.Scanner;
 
 public class BasamakSayilariToplami {
 
