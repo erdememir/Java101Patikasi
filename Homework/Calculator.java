@@ -78,12 +78,18 @@ public class Calculator {
 
         do {
             System.out.println(menu);
+            int a, b = 0;
+
             System.out.print("Lütfen bir işlem seçiniz: ");
             select = input.nextInt();
+            if (select == 0)
+                break;
             System.out.print("İlk sayıyı giriniz: ");
-            int a = input.nextInt();
-            System.out.print("İkinci sayıyı giriniz: ");
-            int b = input.nextInt();
+            a = input.nextInt();
+            if (select != 6) {
+                System.out.print("İkinci sayıyı giriniz: ");
+                b = input.nextInt();
+            }
             switch (select) {
                 case 1:
                     plus(a, b);
