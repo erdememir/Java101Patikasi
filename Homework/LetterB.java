@@ -1,3 +1,5 @@
+package Homework;
+
 public class LetterB {
     public static void main(String[] args) {
         String[][] letter = new String[5][4];
